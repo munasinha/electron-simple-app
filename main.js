@@ -1,13 +1,9 @@
-const {
-    app,
-    BrowserWindow,
-    Menu
-} = require('electron')
+const { app, BrowserWindow, Menu} = require('electron')
 const shell = require('electron').shell
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let win
+let win;
 
 function createWindow() {
     // Create the browser window.
@@ -20,7 +16,7 @@ function createWindow() {
     })
 
     // and load the index.html of the app.
-    win.loadFile('index.html')
+    win.loadFile('src/index.html')
 
     // Open the DevTools.
     win.webContents.openDevTools()
